@@ -9,22 +9,8 @@ import {
   Button,
 } from "react-bootstrap";
 import Home from "./Home";
-import CreatePost from "./CreatePost";
-
-const routes = [
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/create-post",
-    element: <CreatePost />,
-  },
-];
 
 const Navigation = () => {
-  const element = useRoutes(routes);
-
   return (
     <>
       <Navbar collapseOnSelect fixed="top" expand="sm" bg="dark" variant="dark">

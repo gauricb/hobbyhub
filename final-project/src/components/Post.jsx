@@ -3,28 +3,51 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "./Post.css";
+import { supabase } from "../client";
+import { Link } from "react-router-dom";
 
-const Post = () => {
-  const [count, setCount] = useState(0);
-  const updateCount = () => {
+//post component for the main page
+
+const Post = (props) => {
+  const [count, setCount] = useState(props.upvotes);
+  const updateCount = async (event) => {
+    event.preventDefault();
+    await supabase
+      .from("post")
+      .update({ upvotes: count + 1 })
+      .eq("id", props.id);
     setCount((count) => count + 1);
   };
+  function hoursAgo(timeString) {
+    const time = new Date(timeString);
+    const now = new Date();
+    const diffMs = now - time;
+    const diffHrs = Math.floor(diffMs / 1000 / 60 / 60);
+
+    if (diffHrs < 1) {
+      return "less than one hour ago";
+    } else {
+      return diffHrs + " hours ago";
+    }
+  }
   return (
     <div id="card">
-      <Card style={{ width: "50rem" }}>
-        <Card.Body>
-          <Card.Subtitle className="mb-2 text-muted">
-            Posted 20 hours ago
-          </Card.Subtitle>
-          <Card.Text>Post title goes here</Card.Text>
-          <Card.Subtitle className="mb-2 text-muted">
-            {count} upvotes
-          </Card.Subtitle>
-          <Button variant="primary" onClick={updateCount}>
-            Upvote ⬆️
-          </Button>
-        </Card.Body>
-      </Card>
+      <Link to={`/details/${props.id}`}>
+        <Card style={{ width: "50rem" }}>
+          <Card.Body>
+            <Card.Subtitle className="mb-2 text-muted">
+              Posted {hoursAgo(props.time)}
+            </Card.Subtitle>
+            <Card.Text>{props.title}</Card.Text>
+            <Card.Subtitle className="mb-2 text-muted">
+              {count} upvotes
+            </Card.Subtitle>
+            <Button variant="primary" onClick={updateCount}>
+              Upvote ⬆️
+            </Button>
+          </Card.Body>
+        </Card>
+      </Link>
     </div>
   );
 };
