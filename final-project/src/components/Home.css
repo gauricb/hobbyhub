@@ -1,0 +1,28 @@
+#filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+#filters button {
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#filters button:hover {
+  background-color: #0069d9;
+}
+
+p {
+  font-size: 14px;
+}
