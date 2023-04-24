@@ -12,7 +12,7 @@ const Home = () => {
     let { data: post, error } = await supabase
       .from("post")
       .select("*")
-      .order("created_at", { ascending: true });
+      .order("created_at", { ascending: false });
 
     setPosts(post);
   };
