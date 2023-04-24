@@ -32,13 +32,13 @@ const Post = (props) => {
   }
   return (
     <div id="card">
-      <Link to={`/details/${props.id}`}>
+      <Link to={`/details/${props.id}`} style={{ textDecoration: "none" }}>
         <Card style={{ width: "50rem" }}>
           <Card.Body>
             <Card.Subtitle className="mb-2 text-muted">
               Posted {hoursAgo(props.time)}
             </Card.Subtitle>
-            <Card.Text>{props.title}</Card.Text>
+            <Card.Title>{props.title}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               {count} upvotes
             </Card.Subtitle>
