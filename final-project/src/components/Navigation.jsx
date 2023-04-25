@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useRoutes } from "react-router-dom";
 import {
   Navbar,
@@ -10,11 +10,24 @@ import {
 } from "react-bootstrap";
 import Home from "./Home";
 
-const Navigation = () => {
+const Navigation = ({ handleSearch }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("navigation component :" + searchQuery);
+    handleSearch(searchQuery);
+  };
+
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   return (
     <>
       <Navbar collapseOnSelect fixed="top" expand="sm" bg="dark" variant="dark">
         <Container>
+          <Navbar.Brand>MovieHub</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -25,14 +38,18 @@ const Navigation = () => {
                 Make a Post
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={handleSubmit}>
               <FormControl
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={searchQuery}
+                onChange={handleInputChange}
               />
-              <Button variant="outline-light">Search</Button>
+              <Button variant="outline-light" type="submit">
+                Search
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>

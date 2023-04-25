@@ -5,28 +5,80 @@ import "./Home.css";
 import Post from "./Post";
 import { supabase } from "../client";
 
-const Home = () => {
+const Home = ({ query }) => {
   const [posts, setPosts] = useState([]);
+  const [sortBy, setSortBy] = useState("oldest");
 
   const fetchPosts = async () => {
     let { data: post, error } = await supabase
       .from("post")
       .select("*")
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: true });
 
     setPosts(post);
   };
 
   useEffect(() => {
-    fetchPosts();
-  });
+    if (query) {
+      filterPosts(query);
+    } else {
+      fetchPosts();
+    }
+  }, [query]);
+
+  const filterPosts = async (query) => {
+    let { data: post, error } = await supabase
+      .from("post")
+      .select("*")
+      .ilike("title", `%${query}%`)
+      .order("created_at", { ascending: true });
+
+    setPosts(post);
+  };
+
+  const handleSort = () => {
+    console.log(sortBy);
+    if (sortBy === "newest") {
+      //setSortBy("oldest");
+      setPosts([...posts].reverse());
+    } else if (sortBy === "oldest") {
+      //setSortBy("newest");
+      fetchPosts();
+    } else if (sortBy === "popular") {
+      //setSortBy("popular");
+      fetchPopularPosts();
+    }
+  };
+
+  const fetchPopularPosts = async () => {
+    let { data: post, error } = await supabase
+      .from("post")
+      .select("*")
+      .order("upvotes", { ascending: false });
+
+    setPosts(post);
+  };
 
   return (
     <div>
       <div id="filters">
         <p>Order by: </p>
-        <button>Newest</button>
-        <button>Most Popular</button>
+        <button
+          onClick={() => {
+            setSortBy("newest");
+            handleSort();
+          }}
+        >
+          Newest
+        </button>
+        <button
+          onClick={() => {
+            setSortBy("popular");
+            handleSort();
+          }}
+        >
+          Most Popular
+        </button>
       </div>
 
       {posts && posts.length > 0 ? (

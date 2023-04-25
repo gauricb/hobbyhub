@@ -1,10 +1,10 @@
-# Web Development Final Project - _Name of App Here_
+# Web Development Final Project - _HobbyHub_
 
-Submitted by: **Your Name Here**
+Submitted by: **Gauri Barar**
 
-This web app: **insert description**
+This web app: **A community for movie and television show lovers **
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
@@ -15,12 +15,15 @@ The following **required** functionality is completed:
 - [x] **A home feed displaying previously created posts**
 - [x] **By default, the time created, title, and number of upvotes for each post is shown on the feed**
 - [x] **Clicking on a post shall direct the user to a new page for the selected post**
-- [ ] **Users can sort posts by either their created time or upvotes count**
-- [ ] **Users can search for posts by title**
+- [x] **Users can sort posts by either their created time or upvotes count**
+- [x] **Users can search for posts by title**
 - [x] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
 - [x] **Users can leave comments underneath a post on the post's separate page**
 - [x] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
 - [x] **A previously created post can be edited or deleted from its post page**
+
+"Why Breaking Bad is the Best TV Show Ever Made"
+"Breaking Bad is often cited as one of the greatest TV shows ever made - and for good reason. In this post, we explore why the show's masterful writing, acting, and cinematography make it a true classic."
 
 The following **optional** features are implemented:
 
