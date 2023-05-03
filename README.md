@@ -44,7 +44,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./ezgif.com-video-to-mp4.mov' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Link to GIF: https://drive.google.com/file/d/19sdbsMs6ztZVC4NkA8_9LuWlAx4IWxlu/view?usp=sharing
 
 <!-- Replace this with whatever GIF tool you used! -->
 
