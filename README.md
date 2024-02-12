@@ -22,7 +22,6 @@ Welcome to HobbyHub, the go-to community for movie and television show lovers. H
 
 ## Tech Stack
 
-### Backend Technologies
 - **React**: Dynamic and responsive frontend development.
 - **Supabase**: Handles user authentication and database functionalities.
 
