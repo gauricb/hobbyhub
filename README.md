@@ -1,76 +1,35 @@
-# Web Development Final Project - _HobbyHub_
+# HobbyHub - Movie and Television Show Lovers Community
 
-Submitted by: **Gauri Barar**
+Welcome to HobbyHub, the go-to community for movie and television show lovers. HobbyHub is a dynamic web application designed to create a space where users can share their passion for movies and TV shows. Discover, discuss, and engage with fellow enthusiasts on HobbyHub!
 
-This web app: **A community for movie and television show lovers **
+## Features
 
-Time spent: **10** hours spent in total
+### Create and Share
 
-## Required Features
+- **Create Form**: Craft personalized posts with titles and optional content or external image URLs.
+- **Home Feed**: Explore a curated feed of user-generated content, featuring creation time, titles, and upvote counts.
+- **Post Details Page**: Dive into the details of each post on dedicated pages, offering in-depth information.
 
-The following **required** functionality is completed:
+### Interaction and Engagement
 
-- [x] **A create form that allows the user to create posts**
-- [x] **Posts have a title and optionally additional textual content and/or an image added as an external image URL**
-- [x] **A home feed displaying previously created posts**
-- [x] **By default, the time created, title, and number of upvotes for each post is shown on the feed**
-- [x] **Clicking on a post shall direct the user to a new page for the selected post**
-- [x] **Users can sort posts by either their created time or upvotes count**
-- [x] **Users can search for posts by title**
-- [x] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
-- [x] **Users can leave comments underneath a post on the post's separate page**
-- [x] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
-- [x] **A previously created post can be edited or deleted from its post page**
+- **Sorting and Searching**: Easily sort posts by creation time or upvote count, and search for specific posts by title.
+- **Comments Section**: Share thoughts and engage with the community by leaving comments on post pages.
+- **Upvoting System**: Show appreciation for posts with an upvote button, increasing the upvote count with each click.
 
-"Why Breaking Bad is the Best TV Show Ever Made"
-"Breaking Bad is often cited as one of the greatest TV shows ever made - and for good reason. In this post, we explore why the show's masterful writing, acting, and cinematography make it a true classic."
+### Management and Customization
 
-The following **optional** features are implemented:
+- **Post Editing and Deletion**: Take control of your content by editing or deleting previously created posts.
 
-- [ ] Users can only edit and deleted posts or delete comments by entering the secret key, which is set by the user during post creation
-- [ ] Upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them.
-- [ ] Users can repost a previous post by referencing its post ID. On the post page of the new post, the referenced post is displayed and linked, creating a thread
-- [ ] Users can customize the interface of the web app
-- [ ] Users can share and view web videos
-- [ ] Users can set flags while creating a post. Then users can filter posts by flags on the home feed.
-- [ ] Users can upload images directly from their local machine as an image file
-- [ ] Display a loading animation whenever data is being fetched
+## Tech Stack
 
-The following **additional** features are implemented:
+### Backend Technologies
+- **React**: Dynamic and responsive frontend development.
+- **Supabase**: Handles user authentication and database functionalities.
 
-- [ ] List anything else that you added to improve the site's functionality!
+## Getting Started
 
-## Video Walkthrough
+1. Clone the repository: `git clone https://github.com/your-username/HobbyHub.git`
+2. Install dependencies: `npm install`
+3. Run the application: `npm start`
 
-Here's a walkthrough of implemented user stories:
-
-Link to GIF: https://drive.google.com/file/d/19sdbsMs6ztZVC4NkA8_9LuWlAx4IWxlu/view?usp=sharing
-
-<!-- Replace this with whatever GIF tool you used! -->
-
-GIF created with ...
-
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
-
-## Notes
-
-Describe any challenges encountered while building the app.
-
-## License
-
-    Copyright [yyyy] [name of copyright owner]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Explore HobbyHub, connect with fellow enthusiasts, and celebrate your love for movies and TV shows!
